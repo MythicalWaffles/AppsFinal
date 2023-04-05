@@ -360,6 +360,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/_SaveScripts/GameManager.cs"
 "Assets/_SaveScripts/XML_Stuff.cs"
+"Assets/_Scripts/AI_Enemy.cs"
+"Assets/_Scripts/AI_Enemy_Ranger.cs"
+"Assets/_Scripts/Inventory.cs"
+"Assets/_Scripts/ItemClass.cs"
+"Assets/_Scripts/Movement.cs"
+"Assets/_Scripts/Mover.cs"
+"Assets/_Scripts/Player_Ally_Ai.cs"
+"Assets/_Scripts/Player_Stats.cs"
 -langversion:9.0
 
 /deterministic
