@@ -1,23 +1,30 @@
+Unity Editor version:    2022.1.23f1 (9636b062134a)
+Branch:                  2022.1/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 13.0 (Build 22A380)
+Darwin version:          22.1.0
+Architecture:            x86_64
+Running under Rosetta:   NO
+Available memory:        8192 MB
 Using pre-set license
-Built from '2022.1/staging' branch; Version is '2022.1.23f1 (9636b062134a) revision 9844400'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'en' Physical Memory: 16334 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+Pro License: YES
 
 COMMAND LINE ARGUMENTS:
-F:\Unity\2022.1.23f1\Editor\Unity.exe
+/Applications/Unity/Hub/Editor/2022.1.23f1/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Lord Dijon/Desktop/AppsFinalFolder/AppsFinal/Project 3
+/Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57904
-Successfully changed project path to: C:/Users/Lord Dijon/Desktop/AppsFinalFolder/AppsFinal/Project 3
-C:/Users/Lord Dijon/Desktop/AppsFinalFolder/AppsFinal/Project 3
+54241
+Successfully changed project path to: /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3
+/Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,560 +54,170 @@ C:/Users/Lord Dijon/Desktop/AppsFinalFolder/AppsFinal/Project 3
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 80.68 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 479.46 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.1.23f1 (9636b062134a)
-[Subsystems] Discovering subsystems at path F:/Unity/2022.1.23f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Lord Dijon/Desktop/AppsFinalFolder/AppsFinal/Project 3/Assets
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.1.23f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Radeon RX 5500 XT (ID=0x7340)
-    Vendor:   ATI
-    VRAM:     4055 MB
-    Driver:   31.0.12029.10015
+Color LCD preferred device: Intel(R) UHD Graphics 617 (low power)
+Metal devices available: 1
+0: Intel(R) UHD Graphics 617 (low power)
+Using device Intel(R) UHD Graphics 617 (low power)
+Initializing Metal device caps: Intel(R) UHD Graphics 617
 Initialize mono
-Mono path[0] = 'F:/Unity/2022.1.23f1/Editor/Data/Managed'
-Mono path[1] = 'F:/Unity/2022.1.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'F:/Unity/2022.1.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56576
+Mono path[0] = '/Applications/Unity/Hub/Editor/2022.1.23f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2022.1.23f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2022.1.23f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56163
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: F:/Unity/2022.1.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002824 seconds.
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 77.19 ms, found 3 plugins.
+Register platform support module: /Applications/Unity/Hub/Editor/2022.1.23f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.009127 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 315.89 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.570 seconds
+- Completed reload, in  3.430 seconds
 Domain Reload Profiling:
-	ReloadAssembly (570ms)
-		BeginReloadAssembly (61ms)
+	ReloadAssembly (3432ms)
+		BeginReloadAssembly (379ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (419ms)
-			LoadAssemblies (60ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (2513ms)
+			LoadAssemblies (377ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (99ms)
-				TypeCache.Initialize (99ms)
-					TypeCache.ScanAssembly (98ms)
-				ResolveRequiredComponents (0ms)
+			SetupTypeCache (699ms)
+				TypeCache.Initialize (695ms)
+					TypeCache.ScanAssembly (691ms)
+				ResolveRequiredComponents (3ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (249ms)
+			RebuildScriptCaches (277ms)
+			SetupLoadedEditorAssemblies (1179ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (7ms)
-				RefreshPlugins (77ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (119ms)
-				ProcessInitializeOnLoadMethodAttributes (38ms)
+				InitializePlatformSupportModulesInManaged (52ms)
+				SetLoadedEditorAssemblies (33ms)
+				RefreshPlugins (316ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (592ms)
+				ProcessInitializeOnLoadMethodAttributes (183ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006147 seconds.
+Registered in 0.029696 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Symbol file LoadedFromMemory doesn't match image /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 2.63 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 System.Exception: Error! Visual Scripting: couldn't find visual scripting package
-  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
-  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
-  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
-  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
-  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
-  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
-  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
-  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
-  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x00032] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:48 
-  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
+  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Utilities/PackageVersionUtility.cs:31 
+  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugin/BoltCoreManifest.cs:11 
+  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugins/PluginManifest.cs:33 
+  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugins/PluginManifest.cs:48 
+  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugins/PluginContainer.cs:208 
+  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Plugins/PluginContainer.cs:32 
+  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Utilities/VSUsageUtility.cs:76 
+  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Utilities/VSUsageUtility.cs:114 
+  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x00032] in /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Utilities/VSUsageUtility.cs:48 
+  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in /Users/ADV/Desktop/AppsFinalFolder/AppsFinal/Project 3/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Utilities/VSUsageUtility.cs:22 
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
 UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:149)
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs Line: 149)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.333 seconds
+- Completed reload, in  7.958 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1334ms)
-		BeginReloadAssembly (100ms)
+	ReloadAssembly (7963ms)
+		BeginReloadAssembly (549ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (29ms)
 			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (1128ms)
-			LoadAssemblies (78ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (109ms)
+		EndReloadAssembly (6826ms)
+			LoadAssemblies (461ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (256ms)
-				TypeCache.Initialize (253ms)
-					TypeCache.ScanAssembly (249ms)
-				ResolveRequiredComponents (4ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (695ms)
+			SetupTypeCache (1803ms)
+				TypeCache.Initialize (1782ms)
+					TypeCache.ScanAssembly (1766ms)
+				ResolveRequiredComponents (21ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (173ms)
+			SetupLoadedEditorAssemblies (4208ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (6ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (90ms)
-				ProcessInitializeOnLoadAttributes (570ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
+				InitializePlatformSupportModulesInManaged (30ms)
+				SetLoadedEditorAssemblies (35ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (497ms)
+				ProcessInitializeOnLoadAttributes (3514ms)
+				ProcessInitializeOnLoadMethodAttributes (121ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Launching external process: /Applications/Unity/Hub/Editor/2022.1.23f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.29 seconds
+Refreshing native plugins compatible for Editor in 1.37 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3399 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (436.8 KB). Loaded Objects now: 3880.
-Memory consumption went from 0.53 GB to 0.53 GB.
-Total: 12.155900 ms (FindLiveObjects: 0.267300 ms CreateObjectMapping: 0.079400 ms MarkObjects: 11.554100 ms  DeleteObjects: 0.254000 ms)
+Unloading 3407 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (478.4 KB). Loaded Objects now: 3888.
+Memory consumption went from 0.51 GB to 0.51 GB.
+Total: 65.050838 ms (FindLiveObjects: 0.612317 ms CreateObjectMapping: 0.814550 ms MarkObjects: 62.756723 ms  DeleteObjects: 0.865222 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 458260.509400 seconds.
+  Time since last request: 39388.277799 seconds.
+  path: Assets/_Animation/Player_Controller.controller
+  artifactKey: Guid(3b4962a9b698ae94bbdd4121a846eaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Animation/Player_Controller.controller using Guid(3b4962a9b698ae94bbdd4121a846eaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7bec2c831780bb0bc56f798312bb7d0') in 4.948732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
   path: Assets/New Terrain.asset
   artifactKey: Guid(33a2391bd5ea7474d88c080694ed3787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/New Terrain.asset using Guid(33a2391bd5ea7474d88c080694ed3787) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree rpgpp_lt_bush_01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 The tree rpgpp_lt_bush_02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- -> (artifact id: '26f970dd7a7619c6af73ba33944c42da') in 0.081465 seconds 
+ -> (artifact id: '5e7ca8798ae76fdc27a2f1844bba4b51') in 0.714681 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
+  Time since last request: 0.000194 seconds.
   path: Assets/NewLayer 1.terrainlayer
   artifactKey: Guid(3782a3eaafe094af291b1fcc270e867a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NewLayer 1.terrainlayer using Guid(3782a3eaafe094af291b1fcc270e867a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfb5e42590ae7f1add14098546a0ea4f') in 0.038472 seconds 
+Start importing Assets/NewLayer 1.terrainlayer using Guid(3782a3eaafe094af291b1fcc270e867a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f88429ea997998cdce9a93d06b878a') in 0.479260 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
+  Time since last request: 0.000120 seconds.
   path: Assets/NewLayer.terrainlayer
   artifactKey: Guid(e74a72b8028ad4236ba2eff3967015fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/NewLayer.terrainlayer using Guid(e74a72b8028ad4236ba2eff3967015fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6600e3b2f5db27b9e378eedce9282dc') in 0.020456 seconds 
+Start importing Assets/NewLayer.terrainlayer using Guid(e74a72b8028ad4236ba2eff3967015fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2a1c756b4ca2b5aeda2a57a4cea0dc7') in 0.040531 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 11463.736866 seconds.
+  Time since last request: 0.000127 seconds.
   path: Assets/_Scripts
   artifactKey: Guid(1dd5849d0611a487c9d6b13c2e461381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scripts using Guid(1dd5849d0611a487c9d6b13c2e461381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d41c9c58fffec384f60982f4bd5b68') in 0.008328 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006008 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.Exception: Error! Visual Scripting: couldn't find visual scripting package
-  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
-  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
-  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
-  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
-  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
-  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
-  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
-  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
-  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
-  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.224 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1224ms)
-		BeginReloadAssembly (161ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (47ms)
-		EndReloadAssembly (974ms)
-			LoadAssemblies (85ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (258ms)
-				TypeCache.Initialize (254ms)
-					TypeCache.ScanAssembly (250ms)
-				ResolveRequiredComponents (4ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (38ms)
-			SetupLoadedEditorAssemblies (393ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (3ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (54ms)
-				ProcessInitializeOnLoadAttributes (305ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Script is not up to date after domain reload: guid(5c2e5ce19358bf2499c6deb8ae34a986) path("Assets/_Scripts/AI_Enemy.cs") state(2)
-Script is not up to date after domain reload: guid(d0ccb456ef6ac6a4981b906944178cb6) path("Assets/_Scripts/AI_Enemy_Ranger.cs") state(2)
-Refreshing native plugins compatible for Editor in 1.82 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3373 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (411.3 KB). Loaded Objects now: 3896.
-Memory consumption went from 0.53 GB to 0.53 GB.
-Total: 10.643300 ms (FindLiveObjects: 0.265400 ms CreateObjectMapping: 0.085200 ms MarkObjects: 10.031300 ms  DeleteObjects: 0.260200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005329 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.Exception: Error! Visual Scripting: couldn't find visual scripting package
-  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
-  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
-  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
-  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
-  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
-  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
-  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
-  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
-  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
-  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.068 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1068ms)
-		BeginReloadAssembly (119ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (34ms)
-		EndReloadAssembly (870ms)
-			LoadAssemblies (65ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (214ms)
-				TypeCache.Initialize (210ms)
-					TypeCache.ScanAssembly (206ms)
-				ResolveRequiredComponents (4ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (379ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (3ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (50ms)
-				ProcessInitializeOnLoadAttributes (297ms)
-				ProcessInitializeOnLoadMethodAttributes (17ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.74 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3376 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (386.2 KB). Loaded Objects now: 3902.
-Memory consumption went from 0.53 GB to 0.53 GB.
-Total: 9.763000 ms (FindLiveObjects: 0.232100 ms CreateObjectMapping: 0.089100 ms MarkObjects: 9.218700 ms  DeleteObjects: 0.222100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 6156.393288 seconds.
-  path: Assets/_Animation
-  artifactKey: Guid(df015e182614d45d0ad36bf3d1779e6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Animation using Guid(df015e182614d45d0ad36bf3d1779e6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8a7e19953f36ca9eec6394b25e7e7cf') in 0.009711 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 25.008119 seconds.
-  path: Assets/_Animation/New Animator Controller.controller
-  artifactKey: Guid(3b4962a9b698ae94bbdd4121a846eaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Animation/New Animator Controller.controller using Guid(3b4962a9b698ae94bbdd4121a846eaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f773fff4adb18ccd1028b277d027822c') in 0.018454 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 14.669346 seconds.
-  path: Assets/_Animation/Player_Controller.controller
-  artifactKey: Guid(3b4962a9b698ae94bbdd4121a846eaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Animation/Player_Controller.controller using Guid(3b4962a9b698ae94bbdd4121a846eaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed0c67760a82948e90c666f2f0df4874') in 0.007242 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 112.029861 seconds.
-  path: Assets/Standard Assets/Characters
-  artifactKey: Guid(8c32f58513a41ef4dab9cb7704c5fb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Standard Assets/Characters using Guid(8c32f58513a41ef4dab9cb7704c5fb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c48c8ba8dc3752039474c1cbb9bd6546') in 0.007952 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.540466 seconds.
-  path: Assets/Standard Assets/Characters/ThirdPersonCharacter
-  artifactKey: Guid(8912f13e18e67bc478684ec30d73bc64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Standard Assets/Characters/ThirdPersonCharacter using Guid(8912f13e18e67bc478684ec30d73bc64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a98c45f43f2a7f05cedd1ea923fe419') in 0.006245 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.825705 seconds.
-  path: Assets/Blink/Art
-  artifactKey: Guid(112ba712ff84fe54baee7ad2f700c3ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art using Guid(112ba712ff84fe54baee7ad2f700c3ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87c456dd8e6cf447ec20372e4c17a49f') in 0.007002 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.451583 seconds.
-  path: Assets/Blink/Art/Animations
-  artifactKey: Guid(d33901fc9e53f6d41b5a232d05017d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations using Guid(d33901fc9e53f6d41b5a232d05017d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f25ec3585db38cc420642b73675c8eb') in 0.006241 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.784882 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack
-  artifactKey: Guid(2ad470861c2cd154997d20c3bca6d694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack using Guid(2ad470861c2cd154997d20c3bca6d694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd8c359e80d08a5430a011bb89b287b3') in 0.006503 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.711513 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement
-  artifactKey: Guid(0794742d7d4be8242b3a0fd27cae7c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement using Guid(0794742d7d4be8242b3a0fd27cae7c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fff8def63342f331bc8c9f68b177f7d2') in 0.006282 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.344848 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/FallingLoop.fbx
-  artifactKey: Guid(988fefd40c70c4243ac399fce021190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/FallingLoop.fbx using Guid(988fefd40c70c4243ac399fce021190a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5397891090e95fc7ae17952823275db4') in 0.026763 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Jumps.fbx
-  artifactKey: Guid(ab54d1b34370dbe4d896efebb96535ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Jumps.fbx using Guid(ab54d1b34370dbe4d896efebb96535ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c05bbdd58e9bcda5cd05577c9ab1133') in 0.013750 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunForward.fbx
-  artifactKey: Guid(081930da5e255e348940373200bbeaca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunForward.fbx using Guid(081930da5e255e348940373200bbeaca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16336d3b6461d700815c4e39445d18e') in 0.012401 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunBackwardRight.fbx
-  artifactKey: Guid(4d66907684f47e542ab56147b39501fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunBackwardRight.fbx using Guid(4d66907684f47e542ab56147b39501fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07e15de20dec228debf9aa42723c4849') in 0.012264 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/StrafeRight.fbx
-  artifactKey: Guid(71d381e8db65cb547964e023373b98fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/StrafeRight.fbx using Guid(71d381e8db65cb547964e023373b98fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28bb5f71642b89441d0cb0e77413e866') in 0.012298 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunRight.fbx
-  artifactKey: Guid(5120a970404f418419c83af871d9a022) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunRight.fbx using Guid(5120a970404f418419c83af871d9a022) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '846a80898589d663fe24357eb8846794') in 0.012359 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/StrafeLeft.fbx
-  artifactKey: Guid(7177251f0e1f08546b656875551afe28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/StrafeLeft.fbx using Guid(7177251f0e1f08546b656875551afe28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fd9e05daed78a8ec63e3f40d3122426') in 0.012014 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollForward.fbx
-  artifactKey: Guid(5fad9ecdaa1678b408a01f37c5ca69e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollForward.fbx using Guid(5fad9ecdaa1678b408a01f37c5ca69e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '621c0c6f89ee35ba20d3a74e79e6784c') in 0.012979 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollLeft.fbx
-  artifactKey: Guid(7593128404f726548964f394a5d15132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollLeft.fbx using Guid(7593128404f726548964f394a5d15132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a25ec66d055e6a7d0bad01092eaa34') in 0.012078 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Sprint.fbx
-  artifactKey: Guid(dcacd08f98af5794db5b56a6a66048e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Sprint.fbx using Guid(dcacd08f98af5794db5b56a6a66048e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94f9a4124f1f357aa76d57219e2687ff') in 0.013102 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunBackwardLeft.fbx
-  artifactKey: Guid(de0b7914553f4c541a55e2b7f89a240f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunBackwardLeft.fbx using Guid(de0b7914553f4c541a55e2b7f89a240f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19712ac89d7d6718dd6891bf31e5f4e9') in 0.012778 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/JumpWhileRunning.fbx
-  artifactKey: Guid(7f10f6ce81a34824a9cd2746ad0b82ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/JumpWhileRunning.fbx using Guid(7f10f6ce81a34824a9cd2746ad0b82ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd84e52882e8642301d0a7e6240fc5f93') in 0.012340 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunLeft.fbx
-  artifactKey: Guid(eee239821c2dee4429fa8125a1fd6023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunLeft.fbx using Guid(eee239821c2dee4429fa8125a1fd6023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eba2feef05a942be38af982f218b3b83') in 0.012241 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Idle.fbx
-  artifactKey: Guid(c346a9e2503cda64ba4698db6aa5e707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Idle.fbx using Guid(c346a9e2503cda64ba4698db6aa5e707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa7b280ba3230fe22b0be47549f4d52') in 0.014306 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunBackward.fbx
-  artifactKey: Guid(13868b4eb0d3b8a49a77cc4989b9a3de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunBackward.fbx using Guid(13868b4eb0d3b8a49a77cc4989b9a3de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b1de83a69c1681c3a3fdb6a5bfdd918') in 0.012250 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollBackward.fbx
-  artifactKey: Guid(57d50d7ecb0231244b77aacf40cacf29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollBackward.fbx using Guid(57d50d7ecb0231244b77aacf40cacf29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77755b5d9d07777160ce4c10c9fc2ff1') in 0.012616 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollRight.fbx
-  artifactKey: Guid(50e0d5f0490eb5a45b0b5952db236f7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RollRight.fbx using Guid(50e0d5f0490eb5a45b0b5952db236f7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6de8b16be408a8e1f5efd4db6c3c953a') in 0.013029 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 22.943675 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Idle.anim
-  artifactKey: Guid(cdfa0ce7fc909954d818650a09e267d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/Idle.anim using Guid(cdfa0ce7fc909954d818650a09e267d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b59d2467bf8810eb687fbaca6f4ce527') in 0.022734 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 30.128573 seconds.
-  path: Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunForward.anim
-  artifactKey: Guid(46e70c7d48c82234baf6c972665ea55d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Blink/Art/Animations/Animations_Starter_Pack/Movement/RunForward.anim using Guid(46e70c7d48c82234baf6c972665ea55d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41abe6a6809582716fc157370ce6eb88') in 0.017339 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005428 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.Exception: Error! Visual Scripting: couldn't find visual scripting package
-  at Unity.VisualScripting.PackageVersionUtility.get_version () [0x00043] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\PackageVersionUtility.cs:31 
-  at Unity.VisualScripting.BoltCoreManifest.get_version () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugin\BoltCoreManifest.cs:11 
-  at Unity.VisualScripting.PluginManifest.get_currentVersion () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:33 
-  at Unity.VisualScripting.PluginManifest.get_versionMismatch () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginManifest.cs:48 
-  at Unity.VisualScripting.PluginContainer.Initialize () [0x00525] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:208 
-  at Unity.VisualScripting.PluginContainer.InitializeOnLoad () [0x00009] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Plugins\PluginContainer.cs:32 
-  at Unity.VisualScripting.VSUsageUtility.DoInitializeOnLoadCalls () [0x00034] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:76 
-  at Unity.VisualScripting.VSUsageUtility.set_isVisualScriptingUsed (System.Boolean value) [0x0002c] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:114 
-  at Unity.VisualScripting.VSUsageUtility.CheckAndSetIsVisualScriptingUsed () [0x0000d] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:33 
-  at Unity.VisualScripting.VSUsageUtility..cctor () [0x00000] in C:\Users\Lord Dijon\Desktop\AppsFinalFolder\AppsFinal\Project 3\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Utilities\VSUsageUtility.cs:22 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.165 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1166ms)
-		BeginReloadAssembly (156ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (51ms)
-		EndReloadAssembly (929ms)
-			LoadAssemblies (79ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (229ms)
-				TypeCache.Initialize (225ms)
-					TypeCache.ScanAssembly (219ms)
-				ResolveRequiredComponents (4ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (32ms)
-			SetupLoadedEditorAssemblies (392ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (3ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (53ms)
-				ProcessInitializeOnLoadAttributes (306ms)
-				ProcessInitializeOnLoadMethodAttributes (18ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.84 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3375 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 21 unused Assets / (411.5 KB). Loaded Objects now: 3906.
-Memory consumption went from 0.53 GB to 0.53 GB.
-Total: 11.060500 ms (FindLiveObjects: 0.259000 ms CreateObjectMapping: 0.098000 ms MarkObjects: 10.390800 ms  DeleteObjects: 0.311200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Start importing Assets/_Scripts using Guid(1dd5849d0611a487c9d6b13c2e461381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a143ca1b3362ddad24defe70ee87e097') in 0.002138 seconds 
