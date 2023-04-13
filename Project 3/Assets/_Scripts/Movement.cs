@@ -188,46 +188,46 @@ public class Movement : MonoBehaviour
         }
 
     }
-    void firingScript()
-    {
-        if (currentP == "profile 1")
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                inventory.UseItemFromAlphas(1);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                inventory.UseItemFromAlphas(2);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                inventory.UseItemFromAlphas(3);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                inventory.UseItemFromAlphas(4);
-            }
-        }
-        if (currentP == "profile 2")
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                inventory.UseItemFromAlphas(1);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                inventory.UseItemFromAlphas(2);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                inventory.UseItemFromAlphas(3);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                inventory.UseItemFromAlphas(4);
-            }
-        }
+    //void firingScript()
+    //{
+    //    if (currentP == "profile 1")
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.Alpha1))
+    //        {
+    //            inventory.UseItemFromAlphas(1);
+    //        }
+    //        if (Input.GetKeyDown(KeyCode.Alpha2))
+    //        {
+    //            inventory.UseItemFromAlphas(2);
+    //        }
+    //        if (Input.GetKeyDown(KeyCode.Alpha3))
+    //        {
+    //            inventory.UseItemFromAlphas(3);
+    //        }
+    //        if (Input.GetKeyDown(KeyCode.Alpha4))
+    //        {
+    //            inventory.UseItemFromAlphas(4);
+    //        }
+    //    }
+    //    if (currentP == "profile 2")
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.Alpha1))
+    //        {
+    //            inventory.UseItemFromAlphas(1);
+    //        }
+    //        if (Input.GetKeyDown(KeyCode.Alpha2))
+    //        {
+    //            inventory.UseItemFromAlphas(2);
+    //        }
+    //        if (Input.GetKeyDown(KeyCode.Alpha3))
+    //        {
+    //            inventory.UseItemFromAlphas(3);
+    //        }
+    //        if (Input.GetKeyDown(KeyCode.Alpha4))
+    //        {
+    //            inventory.UseItemFromAlphas(4);
+    //        }
+    //    }
         //if (currentP == "profile 3")
         //{
         //    if (Input.GetButtonDown("Trigger"))
@@ -235,7 +235,7 @@ public class Movement : MonoBehaviour
                
         //    }
         //}
-    }
+    //}
     //void DetectController()
     //{
     //    if (Input.GetJoystickNames()[0] != null)
@@ -279,7 +279,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         //keyPressed();
-        firingScript();
+        //firingScript();
         //DetectController();
         CurrentConfig();
         settingActConfig();
