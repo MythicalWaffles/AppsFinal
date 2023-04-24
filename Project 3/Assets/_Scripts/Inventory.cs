@@ -2,12 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Inventory: MonoBehaviour
 {
-    public GameObject spell1;
-    public GameObject spell2;
-    public GameObject spell3;
+    public GameObject earthspellsmall;
+    public GameObject earthspellmedium;
+    public GameObject earthspelllarge;
+
+    public GameObject icespellsmall;
+    public GameObject icespellmedium;
+    public GameObject icespelllarge;
+
+    public GameObject firespellsmall;
+    public GameObject firespellmedium;
+    public GameObject firespelllarge;
+
     public GameObject spawn;
     /*
      Game objects item1-12 are representations of the
@@ -25,6 +35,8 @@ public class Inventory: MonoBehaviour
     public GameObject item10;
     public GameObject item11;
     public GameObject item12;
+    public GameObject item13;
+    public GameObject item14;
 
 
     /*
@@ -40,20 +52,24 @@ public class Inventory: MonoBehaviour
     public GameObject empty; // empty game object for filling linked list
     private LinkedList<ItemClass> primaryINV = new LinkedList<ItemClass>(); //linked list for the main inventory
     private LinkedList<ItemClass> quickINV = new LinkedList<ItemClass>(); //linked list for quick inventory
-    private LinkedListNode<ItemClass> node; //A node to traverse linked list
-    ItemClass[] arrayMainInv; //array for main inventory items
-    ItemClass[] arrayQuickInv; //array for quick items
+ 
+    ItemClass[] arrayMainInv; //array for main inventory items FOR GUI DISPLAY PURPOSES
+    ItemClass[] arrayQuickInv; //array for quick items FOR GUI DISPLAY PURPOSES
+
     GameObject[] itemSlots; // array to house the Gameobjects item1-12
     GameObject[] quickitemSlots;// array to house the Gameobjects quickitem1-4
 
     private int CurrentOccupiedInventorySlots = 0; // integer that changes based on the number of items that have useable game items in them
-    private int inventorySize = 12; // main inventory size
+    private int inventorySize = 14; // main inventory size
 
     bool changing; //bool that changes based on whether or not the user is assigning items to quick inv
     string assign = ""; //used to grab text of the button that acts as an inventory slot
     ItemClass tempItem; //temp item to used in reassigning quick inv
 
     public Player_Stats Player_Stats;
+
+    FileHandler fh;
+
     /// <summary>
     /// Boot inventory initializes the arrays for quick inventory and main inventort. 
     /// It populates the array with blank ItemClass objects. 
@@ -61,18 +77,22 @@ public class Inventory: MonoBehaviour
     /// </summary>
     public void bootInventory()
     {
+        /*
+         * IM THINKING SOMEWHERE IN HERE I CAN MAKE IT TO WHERE BASE ON A BOOLEAN 
+         * THE INVENTORY IS BOOTED FROM A FILE OR FROM SCRATCH
+         */
         arrayMainInv = new ItemClass[inventorySize];
         arrayQuickInv = new ItemClass[4];
         for (int i = 0; i < inventorySize; i++)
         {
-            arrayMainInv[i] = new ItemClass(empty, 0, "nothing");
+            arrayMainInv[i] = new ItemClass( 0, "nothing");
             primaryINV.AddLast(arrayMainInv[i]);
 
             if (i < 4)
             {
                 arrayQuickInv[i] = arrayMainInv[i];
                 quickINV.AddLast(arrayQuickInv[i]);
-                quickitemSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = arrayQuickInv[i].Name;
+                //quickitemSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = arrayQuickInv[i].Name;
             }
 
         }
@@ -86,14 +106,10 @@ public class Inventory: MonoBehaviour
     /// <param name="count"></param>
     void addToInventory(GameObject gameobj, int count)
     {
-        //Debug.Log("It has begun");
-        //LinkedListNode<ItemClass> head = primaryINV.First;
+
         if (CurrentOccupiedInventorySlots >= inventorySize)
         {
-
-
             Debug.Log("You're Done Kid");
-
 
         }
         else {
@@ -114,7 +130,7 @@ public class Inventory: MonoBehaviour
                 else
                 {
                     Debug.Log("The else option for add2Inv was taken");
-                    primaryINV.AddFirst(new ItemClass(gameobj, count, gameobj.name));
+                    primaryINV.AddFirst(new ItemClass(count, gameobj.name));
                     primaryINV.RemoveLast();
                     Debug.Log("add2 prime inv size: " + primaryINV.Count);
                     CurrentOccupiedInventorySlots++;
@@ -137,23 +153,6 @@ public class Inventory: MonoBehaviour
         ItemClass[] arrayQuick = new ItemClass[4];
         quickINV.CopyTo(arrayQuick, 0);
 
-        //for (int i = 0; i < arrayPrimary.Length; i++)
-        //{
-        //    if (obj.GetComponentInChildren<TextMeshProUGUI>().text == arrayPrimary[i].Name && arrayPrimary[i].Quantity > 0)
-        //    {
-        //        int tempV = arrayPrimary[i].Quantity - count;
-        //        arrayPrimary[i].Quantity = tempV;
-        //        UpdateMainArray();
-        //    }
-        //    else if (obj.GetComponentInChildren<TextMeshProUGUI>().text == arrayPrimary[i].Name && arrayPrimary[i].Quantity == 0)
-        //    {
-        //        Debug.Log("Main Quantity should equal 0: " + arrayPrimary[i].Quantity);
-        //        primaryINV.Remove(arrayPrimary[i]);
-        //        primaryINV.AddLast(new ItemClass(empty, 0, "nothing"));
-        //        CurrentOccupiedInventorySlots--;
-        //        UpdateMainArray();
-        //    }
-        //}
         for (int i = 0; i < arrayQuick.Length; i++)
         {
             if (obj.GetComponentInChildren<TextMeshProUGUI>().text == arrayQuick[i].Name && arrayQuick[i].Quantity > 0)
@@ -175,9 +174,8 @@ public class Inventory: MonoBehaviour
             }
             else if (obj.GetComponentInChildren<TextMeshProUGUI>().text == arrayQuick[i].Name && arrayQuick[i].Quantity == 0)
             {
-                //Debug.Log("Main Quantity should equal 0: " + arrayQuick[i].Quantity);
                 quickINV.Remove(arrayQuick[i]);
-                quickINV.AddLast(new ItemClass(empty, 0, "nothing"));
+                quickINV.AddLast(new ItemClass( 0, "nothing"));
                 UpdateQuickArray();
 
                 for (int j = 0; j < arrayPrimary.Length; j++)
@@ -186,7 +184,7 @@ public class Inventory: MonoBehaviour
                     {
                         Debug.Log("Main Quantity should equal 0: " + arrayPrimary[j].Quantity);
                         primaryINV.Remove(arrayPrimary[j]);
-                        primaryINV.AddLast(new ItemClass(empty, 0, "nothing"));
+                        primaryINV.AddLast(new ItemClass( 0, "nothing"));
                         Debug.Log(primaryINV.Count);
                         CurrentOccupiedInventorySlots--;
                         UpdateMainArray();
@@ -194,40 +192,6 @@ public class Inventory: MonoBehaviour
                 }
             }
         }
-        //foreach (ItemClass iC in primaryINV)
-        //{
-        //    if (obj.GetComponentInChildren<TextMeshProUGUI>().text == iC.Name && iC.Quantity > 0)
-        //    {
-        //        int tempV = iC.Quantity - count;
-        //        iC.Quantity = tempV;
-        //        UpdateMainArray();
-        //    } else if (obj.GetComponentInChildren<TextMeshProUGUI>().text == iC.Name && iC.Quantity == 0)
-        //    {
-        //        Debug.Log("Main Quantity should equal 0: " + iC.Quantity);
-        //        primaryINV.Remove(iC);
-        //        primaryINV.AddLast(new ItemClass(empty, 0, "nothing"));
-        //        CurrentOccupiedInventorySlots--;
-        //        UpdateMainArray();
-        //    }
-        //}
-        //foreach (ItemClass iC in quickINV)
-        //{
-        //    if (obj.GetComponentInChildren<TextMeshProUGUI>().text == iC.Name && iC.Quantity > 0)
-        //    {
-        //        int tempV = iC.Quantity - count;
-        //        iC.Quantity = tempV;
-        //        UpdateQuickArray();
-        //    }
-        //    else if (obj.GetComponentInChildren<TextMeshProUGUI>().text == iC.Name && iC.Quantity == 0)
-        //    {
-        //        Debug.Log("Quick Quantity should equal 0: " + iC.Quantity);
-        //        //primaryINV.Remove(iC);
-        //        quickINV.Remove(iC);
-        //        //primaryINV.AddLast(new ItemClass(empty, 0, "nothing"));
-        //        quickINV.AddLast(new ItemClass(empty, 0, "nothing"));
-        //        UpdateQuickArray();
-        //    }
-        //}
     }
 
     /// <summary>
@@ -256,7 +220,6 @@ public class Inventory: MonoBehaviour
     void UpdateMainArray()
     {
         Debug.Log("This Happened");
-        //int count = 0;
         ItemClass[] temparr = new ItemClass[inventorySize];
         primaryINV.CopyTo(temparr, 0);
         for(int i=0; i < temparr.Length; i++)
@@ -265,26 +228,11 @@ public class Inventory: MonoBehaviour
             {
                 arrayMainInv[i] = temparr[i];
             }
-           // count++;
         }
 
-
-        //foreach (ItemClass iC in primaryINV)
-        //{
-        //    if (count < inventorySize)
-        //    {
-        //        arrayMainInv[count] = iC;
-        //    }
-        //    count++;
-        //}
-
-
     }
-
     void UpdateQuickArray()
     {
-        // int count = 0;
-
         ItemClass[] temparray = new ItemClass[4];
         quickINV.CopyTo(temparray, 0);
         for (int i = 0; i < temparray.Length; i++)
@@ -292,122 +240,26 @@ public class Inventory: MonoBehaviour
             if (i < 4)
             {
                 arrayQuickInv[i] = temparray[i];
-                //Debug.Log(arrayMainInv.ToString());
             }
-            //count++;
-        }
-
-        //foreach (ItemClass iC in quickINV)
-        //{
-        //    if (count < inventorySize)
-        //    {
-        //        arrayQuickInv[count] = iC;
-        //    }
-        //    count++;
-        //}
-    }
-
-    void updateQuickDisplay()
-    {
-        for (int i = 0; i < arrayQuickInv.Length; i++)
-        {
-            quickitemSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = arrayQuickInv[i].Name;
         }
     }
 
-    void updateDisplayInv()
-    {
-        for (int i = 0; i < arrayMainInv.Length; i++)
-        {
-            itemSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = arrayMainInv[i].Name;
-        }
-    }
 
-    void Revealinventory()
-    {
-        if (CurrentOccupiedInventorySlots >= 7)
-        {
-            item7.SetActive(true);
-        }
-        if (CurrentOccupiedInventorySlots >= 8)
-        {
-            item8.SetActive(true);
-        }
-        if (CurrentOccupiedInventorySlots >= 9)
-        {
-            item9.SetActive(true);
-        }
-        if (CurrentOccupiedInventorySlots >= 10)
-        {
-            item10.SetActive(true);
-        }
-        if (CurrentOccupiedInventorySlots >= 11)
-        {
-            item11.SetActive(true);
-        }
-        if (CurrentOccupiedInventorySlots >= 12)
-        {
-            item12.SetActive(true);
-        }
-    }
+    //void updateQuickDisplay()
+    //{
+    //    for (int i = 0; i < arrayQuickInv.Length; i++)
+    //    {
+    //        quickitemSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = arrayQuickInv[i].Name;
+    //    }
+    //}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag.Equals("Health_item_1"))
-        {
-            addToInventory(other.gameObject, 5);
-            CheckQuick(other.gameObject, 5);
-            other.gameObject.SetActive(false);
-        }else if (other.tag.Equals("Health_item_2"))
-        {
-            addToInventory(other.gameObject, 5);
-            CheckQuick(other.gameObject, 5);
-            other.gameObject.SetActive(false);
-        }
-        else if (other.tag.Equals("Health_item_3"))
-        {
-            addToInventory(other.gameObject, 5);
-            CheckQuick(other.gameObject, 5);
-            other.gameObject.SetActive(false);
-        }
-        else if (other.tag.Equals("AmmoBox1"))
-        {
-            addToInventory(spell1, 5);
-            addToInventory(spell2, 5);
-            addToInventory(spell3, 5);
-            CheckQuick(spell1, 5);
-            CheckQuick(spell2, 5);
-            CheckQuick(spell3, 5);
-            other.gameObject.SetActive(false);
-        }
-        else if (other.tag.Equals("AmmoBox2"))
-        {
-            addToInventory(spell1, 10);
-            addToInventory(spell2, 10);
-            addToInventory(spell3, 10);
-            CheckQuick(spell1, 10);
-            CheckQuick(spell2, 10);
-            CheckQuick(spell3, 10);
-            other.gameObject.SetActive(false);
-        }
-        else if (other.tag.Equals("AmmoBox3"))
-        {
-            addToInventory(spell1, 20);
-            addToInventory(spell2, 20);
-            addToInventory(spell3, 20);
-            CheckQuick(spell1, 20);
-            CheckQuick(spell2, 20);
-            CheckQuick(spell3, 20);
-            other.gameObject.SetActive(false);
-        }
-        else if (other.tag.Equals("Random"))
-        {
-            addToInventory(other.gameObject, 5);
-            CheckQuick(other.gameObject, 5);
-            other.gameObject.SetActive(false);
-        }
-    }
-
+    //void updateDisplayInv()
+    //{
+    //    for (int i = 0; i < arrayMainInv.Length; i++)
+    //    {
+    //        itemSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = arrayMainInv[i].Name;
+    //    }
+    //}
     public void grabbingItem(GameObject obj)
     {
 
@@ -426,7 +278,6 @@ public class Inventory: MonoBehaviour
 
         }
     }
-
     public void puttingItem(GameObject obj)
     {
         if (changing == true)
@@ -463,30 +314,30 @@ public class Inventory: MonoBehaviour
             string nameofitem = obj.GetComponentInChildren<TextMeshProUGUI>().text;
             switch (nameofitem)
             {
-                case "Health_item_1":
+                case "H1":
                     reduceItems(obj, 1);
                     AdjustHealth(10);
                     break;
-                case "Health_item_2":
+                case "H2":
                     reduceItems(obj, 1);
                     AdjustHealth(20);
                     break;
-                case "Health_item_3":
+                case "H3":
                     reduceItems(obj, 1);
                     AdjustHealth(30);
                     break;
-                case "Spell1":
-                    reduceItems(obj, 1);
-                    Blasting(obj);
-                    break;
-                case "Spell2":
-                    reduceItems(obj, 1);
-                    Blasting(obj);
-                    break;
-                case "Spell3":
-                    reduceItems(obj, 1);
-                    Blasting(obj);
-                    break;
+                //case "Spell1":
+                //    reduceItems(obj, 1);
+                //    Blasting(obj);
+                //    break;
+                //case "Spell2":
+                //    reduceItems(obj, 1);
+                //    Blasting(obj);
+                //    break;
+                //case "Spell3":
+                //    reduceItems(obj, 1);
+                //    Blasting(obj);
+                //    break;
             }
         } 
     }
@@ -514,28 +365,23 @@ public class Inventory: MonoBehaviour
         }
     }
 
-    void AdjustHealth(int hp)
-    {
-        float adjust = hp + Player_Stats.Health;
-        Player_Stats.Health = adjust;
-
-    }
-    void Blasting(GameObject obj)
-    {
-        if (obj.GetComponentInChildren<TextMeshProUGUI>().text == "Spell1")
-        {
-            Instantiate(spell1, spawn.transform.position, spawn.transform.rotation);
-        } else if (obj.GetComponentInChildren<TextMeshProUGUI>().text == "Spell2")
-        {
-            Instantiate(spell2, spawn.transform.position, spawn.transform.rotation);
-        }
-        else if(obj.GetComponentInChildren<TextMeshProUGUI>().text == "Spell3")
-        {
-            Instantiate(spell3, spawn.transform.position, spawn.transform.rotation);
-        }
+    //void Blasting(GameObject obj)
+    //{
+    //    if (obj.GetComponentInChildren<TextMeshProUGUI>().text == "Spell1")
+    //    {
+    //        Instantiate(spell1, spawn.transform.position, spawn.transform.rotation);
+    //    }
+    //    else if (obj.GetComponentInChildren<TextMeshProUGUI>().text == "Spell2")
+    //    {
+    //        Instantiate(spell2, spawn.transform.position, spawn.transform.rotation);
+    //    }
+    //    else if (obj.GetComponentInChildren<TextMeshProUGUI>().text == "Spell3")
+    //    {
+    //        Instantiate(spell3, spawn.transform.position, spawn.transform.rotation);
+    //    }
 
 
-    }
+    //}
 
     public void setChangingTrue()
     {
@@ -564,36 +410,140 @@ public class Inventory: MonoBehaviour
         item11.SetActive(false);
         item12.SetActive(false);
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Equals("H1"))
+        {
+            addToInventory(other.gameObject, 5);
+            CheckQuick(other.gameObject, 5);
+            other.gameObject.SetActive(false);
+        }
+        else if (other.tag.Equals("H2"))
+        {
+            addToInventory(other.gameObject, 5);
+            CheckQuick(other.gameObject, 5);
+            other.gameObject.SetActive(false);
+        }
+        else if (other.tag.Equals("H3"))
+        {
+            addToInventory(other.gameObject, 5);
+            CheckQuick(other.gameObject, 5);
+            other.gameObject.SetActive(false);
+        }
+    }
     void Start()
     {
-        itemSlots = new GameObject[] { item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12 };
+        itemSlots = new GameObject[] { item1, item2, item3, item4, item5, item6, item7, 
+            item8, item9, item10, item11, item12, item13, item14 };
         quickitemSlots = new GameObject[] { quickitem1, quickitem2, quickitem3, quickitem4 };
-        bootInventory();
+       
         changing = false;
+        bootInventory();
         StartingInventory();
+        fh = new FileHandler();
+     
     }
-    
-
-    // Update is called once per frame
     void Update()
     {
         
-        updateDisplayInv();
-        updateQuickDisplay();
+        //updateDisplayInv();
+        //updateQuickDisplay();
         Revealinventory();
     }
-
     private void Awake()
     {
 
         Player_Stats = GetComponent<Player_Stats>();
     }
 
-    //void printarray()
-    //{
-    //    for (int i = 0; i < arrayMainInv.Length; i++)
-    //    {
-    //        Debug.Log("index " + i + ": " + arrayMainInv[i] + "");
-    //    }
-    //}
+
+    void Revealinventory()
+    {
+        if (CurrentOccupiedInventorySlots >= 7)
+        {
+            item7.SetActive(true);
+        }
+        else if (CurrentOccupiedInventorySlots < 7)
+        {
+            item7.SetActive(false);
+        }
+
+        if (CurrentOccupiedInventorySlots >= 8)
+        {
+            item8.SetActive(true);
+        }
+        else if (CurrentOccupiedInventorySlots < 8)
+        {
+            item8.SetActive(false);
+        }
+
+        if (CurrentOccupiedInventorySlots >= 9)
+        {
+            item9.SetActive(true);
+        }
+        else if (CurrentOccupiedInventorySlots < 9)
+        {
+            item9.SetActive(false);
+        }
+
+        if (CurrentOccupiedInventorySlots >= 10)
+        {
+            item10.SetActive(true);
+        }
+        else if (CurrentOccupiedInventorySlots < 10)
+        {
+            item10.SetActive(false);
+        }
+
+        if (CurrentOccupiedInventorySlots >= 11)
+        {
+            item11.SetActive(true);
+        }
+        else if (CurrentOccupiedInventorySlots < 11)
+        {
+            item11.SetActive(false);
+        }
+
+        if (CurrentOccupiedInventorySlots >= 12)
+        {
+            item12.SetActive(true);
+        }
+        else if (CurrentOccupiedInventorySlots < 12)
+        {
+            item12.SetActive(false);
+        }
+
+        if (CurrentOccupiedInventorySlots >= 13)
+        {
+            item13.SetActive(true);
+        }
+        else if (CurrentOccupiedInventorySlots < 13)
+        {
+            item13.SetActive(false);
+        }
+
+        if (CurrentOccupiedInventorySlots >= 14)
+        {
+            item14.SetActive(true);
+        }
+        else if (CurrentOccupiedInventorySlots < 14)
+        {
+            item14.SetActive(false);
+        }
+    }
+    void AdjustHealth(int hp)
+    {
+        float adjust = hp + Player_Stats.Health;
+        Player_Stats.Health = adjust;
+
+    }
+
+
+    public void saveinventory()
+    {
+        Debug.Log("We Here");
+        fh.SaveToJson(primaryINV, "yogurt");
+    }
 }

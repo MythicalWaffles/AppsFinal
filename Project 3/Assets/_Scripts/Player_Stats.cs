@@ -5,7 +5,7 @@ using TMPro;
 
 public class Player_Stats : MonoBehaviour
 {
-    public GameObject objHealth;
+   // public GameObject objHealth;
     float health;
     float maxHealth = 100;
     bool DamageTaken = false;
@@ -57,7 +57,7 @@ public class Player_Stats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        objHealth.GetComponent<TextMeshProUGUI>().text = "Health: " + health.ToString();
+        //objHealth.GetComponent<TextMeshProUGUI>().text = "Health: " + health.ToString();
         TakeDamage();
         HealthRegen();
     }

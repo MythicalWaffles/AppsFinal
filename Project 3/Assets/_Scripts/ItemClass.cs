@@ -8,14 +8,12 @@ public class ItemClass
 {
 
     private int quantity;
-    private GameObject gameObj;
     private string name;
 
 
-    public ItemClass(GameObject gameOb, int count, string named)
+    public ItemClass(int count, string named)
     {
         quantity = count;
-        gameObj = gameOb;
         name = named;
     }
 
