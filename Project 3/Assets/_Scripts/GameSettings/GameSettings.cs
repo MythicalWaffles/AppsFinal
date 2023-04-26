@@ -62,6 +62,15 @@ public class GameSettings: MonoBehaviour
     {
         gameH.SavetoJson(gameH.Shadows, gameH.Resolution, gameH.WindowRes, gameH.Fov, gameH.Fullscreen);
     }
+
+    public void LoadPresavedSetting()
+    {
+        gameH.LoadfromJson();
+        Camera.main.fieldOfView = gameH.Fov;
+        ToggleShadows(gameH.Shadows);
+
+
+    }
     // Start is called before the first frame update
     void Start()
     {

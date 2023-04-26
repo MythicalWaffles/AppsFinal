@@ -6,6 +6,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using TMPro;
+using System.Runtime.InteropServices.ComTypes;
 
 
 [Serializable]
@@ -69,17 +70,14 @@ public class GameSettingsHandler
 
     public void LoadfromJson()
     {
+        Debug.Log("Hello");
+        Stream newStream = File.OpenRead("Gamesettings.json");
+        BinaryFormatter bf = new BinaryFormatter();
 
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        shadows = (int)(bf.Deserialize(newStream));
+        resolution = (int)(bf.Deserialize(newStream));
+        windowRes = (int)(bf.Deserialize(newStream));
+        fov = (float)(bf.Deserialize(newStream));
+        fullscreen = (int)(bf.Deserialize(newStream));
     }
 }
