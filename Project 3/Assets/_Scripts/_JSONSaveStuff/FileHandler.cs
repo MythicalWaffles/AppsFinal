@@ -8,16 +8,28 @@ using TMPro;
 
 public class FileHandler
 {
-    public void SaveToJson(LinkedList<ItemClass> list)
+    ItemClass[] mainInv;
+    ItemClass[] quickInv;
+
+
+
+    public void SaveToJson(LinkedList<ItemClass> listMain, LinkedList<ItemClass> listSecond)
     {
         Debug.Log("I have arrived");
         ItemClass[] savearray = new ItemClass[14];
-        list.CopyTo(savearray, 0);
-        WriteFile(savearray);
+        ItemClass[] saveQarray = new ItemClass[4];
+        listMain.CopyTo(savearray, 0);
+        listSecond.CopyTo(saveQarray, 0);
+        WriteFile(savearray, saveQarray);
     }
 
     public void ReadFromJson()
     {
+        Stream newStream = File.OpenRead("Inventory.json");
+        BinaryFormatter bf = new BinaryFormatter();
+
+        mainInv = (ItemClass[])(bf.Deserialize(newStream));
+        quickInv = (ItemClass[])(bf.Deserialize(newStream));
 
     }
 
@@ -28,7 +40,7 @@ public class FileHandler
         return Application.persistentDataPath + "/" + filename;
     }
 
-    private void WriteFile(ItemClass[] content)
+    private void WriteFile(ItemClass[] content, ItemClass[] quickcontent)
     {
         Debug.Log("bye bye");
         //FileMode.Create creates a new file if one does not exist or overwrite it if it does exist
@@ -38,6 +50,7 @@ public class FileHandler
          * CODE SNIPPET BELOW IS GOINNG TO BE USE TO SERIALIZE AN OBJECT LIKE AN
          * INTEGER OR STRING
          */
+        bf.Serialize(newStream, content);
         bf.Serialize(newStream, content);
 
         newStream.Close();

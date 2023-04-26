@@ -625,6 +625,6 @@ public class Inventory: MonoBehaviour
     public void saveinventory()
     {
         Debug.Log("We Here");
-        fh.SaveToJson(primaryINV);
+        fh.SaveToJson(primaryINV, quickINV);
     }
 }
