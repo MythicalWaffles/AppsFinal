@@ -6,7 +6,7 @@ public class Menu_Controller : MonoBehaviour
 {
     public GameObject menu;
     public GameObject setting;
-    public GameObject save;
+    public GameObject inventory;
 
 
     public void OpenMenu()
@@ -25,18 +25,20 @@ public class Menu_Controller : MonoBehaviour
     {
         setting.SetActive(false);
     }
-    public void OpenSave()
+    public void OpenInv()
     {
-        save.SetActive(true);
+        inventory.SetActive(true);
     }
-    public void CloseSave()
+    public void CloseInv()
     {
-        save.SetActive(false);
+        inventory.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        menu.SetActive(false);
+        setting.SetActive(false);
+        inventory.SetActive(false);
     }
 
     // Update is called once per frame
