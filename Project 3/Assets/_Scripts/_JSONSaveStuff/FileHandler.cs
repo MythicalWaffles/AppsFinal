@@ -8,8 +8,8 @@ using TMPro;
 
 public class FileHandler
 {
-    ItemClass[] mainInv;
-    ItemClass[] quickInv;
+   public  ItemClass[] mainInv;
+    public ItemClass[] quickInv;
 
 
 
@@ -30,6 +30,7 @@ public class FileHandler
 
         mainInv = (ItemClass[])(bf.Deserialize(newStream));
         quickInv = (ItemClass[])(bf.Deserialize(newStream));
+        newStream.Close();
 
     }
 

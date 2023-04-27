@@ -15,6 +15,8 @@ public class GameSettings: MonoBehaviour
 
     int[] basesettings = new int[] { 0, 2, 90, 0, 0 };
 
+    bool setter; 
+
     public void ToggleShadows(int newToggle)
     {
         gameH.Shadows = newToggle;
@@ -53,11 +55,6 @@ public class GameSettings: MonoBehaviour
         Camera.main.fieldOfView = gameH.Fov;
     }
 
-    public void FullScreen()
-    {
-
-    }
-
     public void SaveGameSetting()
     {
         gameH.SavetoJson(gameH.Shadows, gameH.Resolution, gameH.WindowRes, gameH.Fov, gameH.Fullscreen);
@@ -65,17 +62,27 @@ public class GameSettings: MonoBehaviour
 
     public void LoadPresavedSetting()
     {
-        gameH.LoadfromJson();
-        Camera.main.fieldOfView = gameH.Fov;
-        ToggleShadows(gameH.Shadows);
+        if (setter.Equals(true))
+        {
+            gameH.LoadfromJson();
+            Camera.main.fieldOfView = gameH.Fov;
+            ToggleShadows(gameH.Shadows);
+        }
+    }
+    public void sets()
+    {
+        Stream newStream = File.OpenRead("Load.json");
+        BinaryFormatter bf = new BinaryFormatter();
+        setter = (bool)(bf.Deserialize(newStream));
 
+        newStream.Close();
 
+        LoadPresavedSetting();
     }
     // Start is called before the first frame update
     void Start()
     {
-      
-
+        sets();
     }
 
     // Update is called once per frame

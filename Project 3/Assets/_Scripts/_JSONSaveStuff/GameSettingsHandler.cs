@@ -79,5 +79,7 @@ public class GameSettingsHandler
         windowRes = (int)(bf.Deserialize(newStream));
         fov = (float)(bf.Deserialize(newStream));
         fullscreen = (int)(bf.Deserialize(newStream));
+
+        newStream.Close();
     }
 }

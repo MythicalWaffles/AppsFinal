@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
+using UnityEngine.UI;
+using System.IO;
 
 public class Inventory: MonoBehaviour
 {
@@ -69,6 +73,38 @@ public class Inventory: MonoBehaviour
     public Player_Stats Player_Stats;
 
     FileHandler fh;
+
+    bool setter;
+
+    void Start()
+    {
+        itemSlots = new GameObject[] { item1, item2, item3, item4, item5, item6, item7,
+            item8, item9, item10, item11, item12, item13, item14 };
+        quickitemSlots = new GameObject[] { quickitem1, quickitem2, quickitem3, quickitem4 };
+
+        Player_Stats = GetComponent<Player_Stats>();
+        fh = new FileHandler();
+        sets();
+        changing = false;
+        StartingInventory();
+
+
+
+
+    }
+
+    private void Awake()
+    {
+
+    }
+
+    void FixedUpdate()
+    {
+
+        updateDisplayInv();
+        updateQuickDisplay();
+        Revealinventory();
+    }
 
     /// <summary>
     /// Boot inventory initializes the arrays for quick inventory and main inventort. 
@@ -244,10 +280,9 @@ public class Inventory: MonoBehaviour
         }
     }
 
-
     void updateQuickDisplay()
     {
-        for (int i = 0; i < arrayQuickInv.Length; i++)
+        for (int i = 0; i < quickitemSlots.Length; i++)
         {
             quickitemSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = arrayQuickInv[i].Name;
         }
@@ -269,7 +304,7 @@ public class Inventory: MonoBehaviour
 
             foreach (ItemClass iC in primaryINV)
             {
-                if (iC.Name == assign)
+                if ( iC.Name == assign)
                 {
                     Debug.Log("Its working");
                     tempItem = iC;
@@ -443,14 +478,6 @@ public class Inventory: MonoBehaviour
         tempItem = null;
     }
 
-    //public void openInventory(GameObject obj)
-    //{
-    //    obj.SetActive(true);
-    //}
-    //public void closeInventory(GameObject obj)
-    //{
-    //    obj.SetActive(false);
-    //}
     public void StartingInventory()
     {
         item7.SetActive(false);
@@ -514,32 +541,43 @@ public class Inventory: MonoBehaviour
         }
 
     }
-    void Start()
-    {
-        itemSlots = new GameObject[] { item1, item2, item3, item4, item5, item6, item7, 
-            item8, item9, item10, item11, item12, item13, item14 };
-        quickitemSlots = new GameObject[] { quickitem1, quickitem2, quickitem3, quickitem4 };
-       
-        changing = false;
-        bootInventory();
-        StartingInventory();
-        fh = new FileHandler();
-     
-    }
-    void Update()
-    {
-        
-        updateDisplayInv();
-        //updateQuickDisplay();
-        Revealinventory();
-    }
-    private void Awake()
-    {
 
-        Player_Stats = GetComponent<Player_Stats>();
+    public void sets()
+    {
+        Stream newStream = File.OpenRead("Load.json");
+        BinaryFormatter bf = new BinaryFormatter();
+        setter = (bool)(bf.Deserialize(newStream));
+
+        newStream.Close();
+
+        LoadPresavedInventory();
     }
 
+    public void LoadPresavedInventory()
+    {
+        if (setter.Equals(true)){
+            fh.ReadFromJson();
+            arrayMainInv = fh.mainInv;
+            arrayQuickInv = fh.quickInv;
+            for (int i = 0; i < inventorySize; i++)
+            {
+                arrayMainInv[i] = new ItemClass(0, "nothing");
+                primaryINV.AddLast(arrayMainInv[i]);
 
+                if (i < 4)
+                {
+                    arrayQuickInv[i] = arrayMainInv[i];
+                    quickINV.AddLast(arrayQuickInv[i]);
+                    //quickitemSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = arrayQuickInv[i].Name;
+                }
+
+            }
+        } else
+        {
+            bootInventory();
+        }
+    }
+   
     void Revealinventory()
     {
         if (CurrentOccupiedInventorySlots >= 7)
